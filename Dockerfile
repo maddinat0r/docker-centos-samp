@@ -3,6 +3,7 @@ FROM centos:7
 RUN yum update -q -y \
 	&& yum install -q -y \
 		gcc-c++ \
+		glibc-devel \
 		glibc-devel.i686 \
 		make \
 		wget \

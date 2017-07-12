@@ -27,7 +27,7 @@ RUN yum update -q -y \
 	&& tar xfz boost_1_63_0.tar.gz \
 	&& cd boost_1_63_0 \
 	&& ./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic \
-	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install \
+	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 -d0 install \
 	&& cd .. \
 	# SA-MP server + includes
 	&& wget http://files.sa-mp.com/samp037svr_R2-1.tar.gz \

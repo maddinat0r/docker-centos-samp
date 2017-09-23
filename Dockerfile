@@ -23,9 +23,9 @@ RUN yum update -q -y \
 	&& chmod +x cmake-3.8.2-Linux-x86_64.sh \
 	&& ./cmake-3.8.2-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
-	&& wget https://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.tar.gz \
-	&& tar xfz boost_1_63_0.tar.gz \
-	&& cd boost_1_63_0 \
+	&& wget https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz \
+	&& tar xfz boost_1_64_0.tar.gz \
+	&& cd boost_1_64_0 \
 	&& ./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic \
 	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 -d0 install \
 	&& cd .. \

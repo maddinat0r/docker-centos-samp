@@ -19,9 +19,9 @@ RUN yum update -q -y \
 	&& mkdir /root/downloads \
 	# install new CMake
 	&& cd /root/downloads \
-	&& wget https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.sh \
-	&& chmod +x cmake-3.7.2-Linux-x86_64.sh \
-	&& ./cmake-3.7.2-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
+	&& wget https://cmake.org/files/v3.8/cmake-3.8.2-Linux-x86_64.sh \
+	&& chmod +x cmake-3.8.2-Linux-x86_64.sh \
+	&& ./cmake-3.8.2-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
 	&& wget https://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.tar.gz \
 	&& tar xfz boost_1_63_0.tar.gz \
